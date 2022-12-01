@@ -1,1 +1,23 @@
-<p>servers works!</p>
+ <label>{{name}}</label>  <!--this is string interpolation and one way data binding, -->
+                          <!-- this is reference from servers.component.ts, name is a variable  -->
+
+ <h5>Server with id {{ServerId}} is a {{ServerStatus}}</h5> 
+ <!-- ServerId and ServerStatus is a example of string interpolation -->
+ 
+ <h5>Server with id {{ServerId}} is a {{getServerStatus()}}</h5>  
+ <!-- getServerStatus this is a method we call for string interpolation -->
+
+
+ <button [disabled] = 'allowNewFeature' (click)="onCreateServer()">Add Server</button>
+ <!-- this is a example of Property Binding, we created allowNewFeature property in component.ts -->
+  <!-- (click) = "onCreateServer()"- this method is event binding here we used -->
+
+        <div>{{serverCreationStatus}}</div>
+
+ <!-- <img [src]='imgUrl'> -->
+<hr>
+ <div>
+Two Way Data Binding
+ </div>
+<input type="text" [(ngModel)] = "serverName"> <br>
+{{serverName}}
