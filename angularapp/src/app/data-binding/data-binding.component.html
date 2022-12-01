@@ -1,0 +1,6 @@
+<hr>
+<h2>Two Way Data Binding - Assignment </h2>
+<label for="uname"><b>Username</b></label>
+<input type="text" name="uname" [(ngModel)] = "userName">
+<P>User Name is : {{userName}}</P>
+<button (click)="onReset()" [disabled]="!userName">Reset UserName</button>
