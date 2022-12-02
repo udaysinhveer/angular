@@ -1,0 +1,33 @@
+<h2 class="structuralDirectives">structural-directive-assignment</h2>
+<h3>1.ngIF</h3>
+<label>Angular 8</label>
+<input type="checkbox" [(ngModel)]="isChecked" >
+<div *ngIf="isChecked"> 8 is an open-source, client-side TypeScript based JavaScript framework. It is written in 
+    TypeScript and complied into JavaScript. Angular 8 is used to create dynamic web 
+    applications. It is very similar to its previous versions except having some extensive features</div>
+<hr>
+    <h3>2.Top 3 Courses - ngFor</h3>
+    <div>
+        </div>
+        <div>
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>FrontEnd/BackEnd</th>
+                        <th>Course Fees</th>
+                        <th>Course Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let course of course">
+                        <td>{{course.courseName}}</td>
+                        <td>{{course.frontEndBackend}}</td>
+                        <td>{{course.courseDuration}}</td>
+                        <td>{{course.courseFees}}</td>
+                    </tr>
+                </tbody>
+        
+            </table>
+        </div>
+    <hr>

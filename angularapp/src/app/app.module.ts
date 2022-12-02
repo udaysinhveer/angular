@@ -9,6 +9,9 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DemoDirectivesComponent,
+    NgSwitchComponent,
+    StructuralDirectiveAssignmentComponent
   ],
   imports: [
     BrowserModule,
