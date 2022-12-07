@@ -15,10 +15,19 @@ course : Courses [] = [
   {courseName: 'Java Developer', frontEndBackend: 'BackEnd', courseDuration : '6 Months', courseFees : '100000', }
 ]
 
+
+  selectedProduct : string;
+  switchExample : string = "ngSwitch Case Example"
+
   constructor() { }
 
   ngOnInit() {
   
   }
+  getProductValue(value){
+    console.log(value.target.value);
+    this.selectedProduct =value.target.value;
+  }
+
 
 }
