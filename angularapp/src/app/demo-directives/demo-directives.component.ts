@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from '../models/movie';
 
 @Component({
@@ -15,6 +15,8 @@ export class DemoDirectivesComponent implements OnInit {
     {title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2022'},
     {title: 'KGF', director: 'RockBhai', cast: 'Yash', releaseDate: '2019'},
   ]
+  
+  @Input() myinputMsg : string;
 
   constructor() { }
 
