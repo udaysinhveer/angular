@@ -13,14 +13,16 @@
   <table class="table table-success table-striped">
     <thead>
       <tr>
+        <th>Sr.No</th>
         <th>Course Name</th>
         <th>FrontEnd/BackEnd</th>
-        <th>Course Fees</th>
         <th>Course Duration</th>
+        <th>Course Fees</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let course of course">
+      <tr *ngFor="let course of course; let i = index;">
+        <td>{{i+1}}</td>
         <td>{{course.courseName}}</td>
         <td>{{course.frontEndBackend}}</td>
         <td>{{course.courseDuration}}</td>
@@ -58,14 +60,20 @@
         </P>
 
       </h2>
-      <h2 class="text-success" *ngSwitchCase="'book2'"><img src="https://upload.wikimedia.org/wikipedia/en/b/bd/The_Subtle_Art_of_Not_Giving_a_F%2Ack_by_Mark_Manson_-_Book_Cover.png"><p>The Subtle Art of Not
-   Giving a F*ck: A Counterintuitive Approach to Living a Good Life is a 2016 nonfiction
-   self-help book by American blogger and author Mark Manson.The book covers Manson's belief
-   that life's struggles give it meaning and argues that typical self-help books offer 
-   meaningless positivity which is neither practical nor helpful, thus improperly approaching
-   the problems many individuals face. It was a New York Times and Globe and Mail bestseller.</p></h2>
-  <h2 class="text-success" *ngSwitchCase="'book3'"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Chatrapati_Shivaji_Maharaj.jpg"><p>Sriman Yogi is a Marathi language
-   historical novel written by Ranjit Desai . This book is based on the life of Chhatrapati Shivaji Maharaj,
-   the founder of the Maratha Empire. The novel was published by Mehta Publishing House .</p></h2>
+      <h2 class="text-success" *ngSwitchCase="'book2'"><img
+          src="https://upload.wikimedia.org/wikipedia/en/b/bd/The_Subtle_Art_of_Not_Giving_a_F%2Ack_by_Mark_Manson_-_Book_Cover.png">
+        <p>The Subtle Art of Not
+          Giving a F*ck: A Counterintuitive Approach to Living a Good Life is a 2016 nonfiction
+          self-help book by American blogger and author Mark Manson.The book covers Manson's belief
+          that life's struggles give it meaning and argues that typical self-help books offer
+          meaningless positivity which is neither practical nor helpful, thus improperly approaching
+          the problems many individuals face. It was a New York Times and Globe and Mail bestseller.</p>
+      </h2>
+      <h2 class="text-success" *ngSwitchCase="'book3'"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Chatrapati_Shivaji_Maharaj.jpg">
+        <p>Sriman Yogi is a Marathi language
+          historical novel written by Ranjit Desai . This book is based on the life of Chhatrapati Shivaji Maharaj,
+          the founder of the Maratha Empire. The novel was published by Mehta Publishing House .</p>
+      </h2>
     </div>
     <hr>
