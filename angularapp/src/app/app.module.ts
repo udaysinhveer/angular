@@ -12,6 +12,9 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
+import { AttributesComponent } from './attributes/attributes.component';
+import { CustomDirectivesDirective } from './custom-directives.directive';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { StructuralDirectiveAssignmentComponent } from './structural-directive-a
     DataBindingComponent,
     DemoDirectivesComponent,
     NgSwitchComponent,
-    StructuralDirectiveAssignmentComponent
+    StructuralDirectiveAssignmentComponent,
+    AttributesComponent,
+    CustomDirectivesDirective,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
