@@ -7,27 +7,24 @@ import { Courses } from '../models/movie';
   styleUrls: ['./structural-directive-assignment.component.css']
 })
 export class StructuralDirectiveAssignmentComponent implements OnInit {
-isShowThis : boolean = true;
+  isShowThis: boolean = true;
 
-course : Courses [] = [
-  {courseName: 'Angular Developer', frontEndBackend: 'FrontEnd', courseDuration : '3 Months', courseFees : '50000', },
-  {courseName: 'React Developer', frontEndBackend: 'FrontEnd', courseDuration : '5 Months', courseFees : '90000', },
-  {courseName: 'Java Developer', frontEndBackend: 'BackEnd', courseDuration : '6 Months', courseFees : '100000', }
-]
+  course: Courses[] = [
+    { courseName: 'Angular Developer', frontEndBackend: 'FrontEnd', courseDuration: '3 Months', courseFees: '50000', },
+    { courseName: 'React Developer', frontEndBackend: 'FrontEnd', courseDuration: '5 Months', courseFees: '90000', },
+    { courseName: 'Java Developer', frontEndBackend: 'BackEnd', courseDuration: '6 Months', courseFees: '100000', }
+  ]
 
-
-  selectedProduct : string;
-  switchExample : string = "ngSwitch Case Example"
+  selectedProduct: string;
+  switchExample: string = "ngSwitch Case Example"
 
   constructor() { }
 
   ngOnInit() {
-  
+
   }
-  getProductValue(value){
+  getProductValue(value) {
     console.log(value.target.value);
-    this.selectedProduct =value.target.value;
+    this.selectedProduct = value.target.value;
   }
-
-
 }
