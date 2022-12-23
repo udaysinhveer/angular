@@ -1,26 +1,75 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1 class="demo">
     Welcome to {{ title }}!
   </h1>
- 
   <app-server></app-server>
-  <img width="100" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
   <hr>
-   <button type="button" class="btn btn-success">Success</button> <!--button from bootstrap -->
-  <h5> <app-servers></app-servers></h5>
+  <button type="button" class="btn btn-success">Success</button>
+  <!--button from bootstrap -->
+  <h5>
+    <app-servers></app-servers>
+  </h5>
   <app-warning-alert></app-warning-alert>
   <app-data-binding></app-data-binding>
   <hr>
-  <h4><app-demo-directives></app-demo-directives></h4>
+  <h4>
+    <app-demo-directives></app-demo-directives>
+  </h4>
   <hr>
-  
- <h3> <app-ng-switch> </app-ng-switch></h3>
- <h3><app-structural-directive-assignment></app-structural-directive-assignment></h3>
- <hr>
+  <h3>
+    <app-ng-switch> </app-ng-switch>
+  </h3>
+  <h3>
+    <app-structural-directive-assignment></app-structural-directive-assignment>
+  </h3>
+  <hr>
+  <app-select-my-pictures></app-select-my-pictures>
+  <hr>
 </div>
-<h3><app-attributes></app-attributes></h3>
+<h3>
+  <app-attributes></app-attributes>
+</h3>
 <div style="text-align:center">
 </div>
-<app-demo-directives [myinputMsg]="uname"></app-demo-directives>
+<!-- <app-demo [myInputMsg]="myName" ></app-demo>  -->
+<!-- this data we passing in another component  -->
+
+<!-- <app-demo [myInputMsg]="udayInfo" ></app-demo>  
+  <div *ngFor="let e of employeeRecords">
+  <app-demo [employee]="e" ></app-demo> -->
+<!-- </div> -->
+<ul *ngFor="let f of foods">
+  <li>
+    {{f}} {{parentComponent}}
+  </li>
+</ul>
+
+<app-demo (foodevent)="getDataFromChild ($event)"></app-demo>
+
+<app-parent-component></app-parent-component>
+
+<h3>
+  <div style="text-align:center">
+    <select (change)="uid = sid.value" #sid>
+      <option selected disabled>No value selected</option>
+      <option [value]="id" *ngFor="let id of [1,2,3,4]">
+        {{id}}
+      </option>
+    </select>
+  </div>
+</h3>
+
+<div class="row" style="text-align:center;">
+  <div class="col-md-12">
+    <input type="text" placeholder="enter value" (blur)="handleData($event)">
+    <p>Product Name:<input type="text" placeholder="Enter Product Name" [(ngModel)]="name"></p>
+    <p>Product Price:<input type="text" placeholder="Enter Product Price" [(ngModel)]="price"></p>
+    <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
+    <app-hooks [userId]="uid" [product]="product"></app-hooks>
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>

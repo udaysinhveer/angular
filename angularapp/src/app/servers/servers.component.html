@@ -1,23 +1,25 @@
- <label>{{name}}</label>  <!--this is string interpolation and one way data binding, -->
-                          <!-- this is reference from servers.component.ts, name is a variable  -->
-
- <h5>Server with id {{ServerId}} is a {{ServerStatus}}</h5> 
+ <h6>Belows are examples of - String interpolation</h6>
+ <label>{{name}}</label>
+ <!--this is string interpolation and one way data binding, -->
+ <!-- this is reference from servers.component.ts, name is a variable  -->
+ <h5>Server with id {{ServerId}} is a {{ServerStatus}}</h5>
  <!-- ServerId and ServerStatus is a example of string interpolation -->
- 
- <h5>Server with id {{ServerId}} is a {{getServerStatus()}}</h5>  
+
+ <h5>Server with id {{ServerId}} is a {{getServerStatus()}}</h5>
  <!-- getServerStatus this is a method we call for string interpolation -->
-
-
- <button type="button" class="btn btn-primary" [disabled] = 'allowNewFeature' (click)="onCreateServer()">Add Server</button>
- <!-- this is a example of Property Binding, we created allowNewFeature property in component.ts -->
-  <!-- (click) = "onCreateServer()"- this method is event binding here we used -->
-
-        <div>{{serverCreationStatus}}</div>
-
- <!-- <img [src]='imgUrl'> -->
 <hr>
+<h6><b>Event Binding</b> - <i>On clicking Add server it change it's value, here we used event binding</i></h6>
+ <button type="button" class="btn btn-primary" [disabled]='allowNewFeature' (click)="onCreateServer()">Add
+   Server</button>
+ <!-- this is a example of Property Binding, we created allowNewFeature property in component.ts -->
+ <!-- (click) = "onCreateServer()"- this method is event binding here we used -->
+ <div>{{serverCreationStatus}}</div>
+ <hr>
+<h5>Below we bind TypeScript logo using Property Binding</h5>
+ <img [src]='imgUrl' style="height: 40px;">
+ <hr>
  <h4>
-Two Way Data Binding
+   Two Way Data Binding
  </h4>
-<input type="text" [(ngModel)] = "serverName"> <br>
-{{serverName}}
+ <input type="text" [(ngModel)]="serverName"> <br>
+ {{serverName}}

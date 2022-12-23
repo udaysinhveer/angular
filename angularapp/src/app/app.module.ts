@@ -15,6 +15,10 @@ import { StructuralDirectiveAssignmentComponent } from './structural-directive-a
 import { AttributesComponent } from './attributes/attributes.component';
 import { CustomDirectivesDirective } from './custom-directives.directive';
 import { DemoComponent } from './demo/demo.component';
+import { SelectMyPicturesComponent } from './select-my-pictures/select-my-pictures.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { DemoComponent } from './demo/demo.component';
     StructuralDirectiveAssignmentComponent,
     AttributesComponent,
     CustomDirectivesDirective,
-    DemoComponent
+    DemoComponent,
+    SelectMyPicturesComponent,
+    ChildComponentComponent,
+    ParentComponentComponent,
+    HooksComponent
   ],
   imports: [
     BrowserModule,

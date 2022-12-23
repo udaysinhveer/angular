@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attributes.component.css']
 })
 export class AttributesComponent implements OnInit {
-  uname;
+  uname:any;
   textColor = 'red';
+  backColor = 'pink';
   people:any[]=[
     {
       "name": "jack",

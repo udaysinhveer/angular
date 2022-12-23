@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+<div>
+  <select class="form-control" (change)="getPicture($event)">
+    <option value="Default">Select Person</option>
+    <option value="Uday">Uday</option>
+    <option value="Bappa">Bappa</option>
+    <option value="Aaba">Aaba</option>
+  </select>
+</div>
+<br>
+<br>
+<div class="col-md-12" [ngSwitch]="selectedPicture">
+  <h2 class="text-success" *ngSwitchDefault>Please Select Person</h2>
+  <h2 class="text-success" *ngSwitchCase="'Uday'"><img src="./assets/udaypic.jpg" style="width: 300px;"></h2>
+  <h2 class="text-success" *ngSwitchCase="'Bappa'"><img src="./assets/bappapic.jpg" style="width: 300px;"></h2>
+  <h2 class="text-success" *ngSwitchCase="'Aaba'"><img src="./assets/aabapic.jpg" style="width: 300px;"></h2>
+</div>

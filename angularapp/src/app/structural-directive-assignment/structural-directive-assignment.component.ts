@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Courses } from '../models/movie';
 
+
 @Component({
   selector: 'app-structural-directive-assignment',
   templateUrl: './structural-directive-assignment.component.html',

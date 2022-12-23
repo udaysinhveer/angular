@@ -6,16 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-switch.component.css']
 })
 export class NgSwitchComponent implements OnInit {
-  selectedProduct : string;
-  switchExample : string = "ngSwitch Case Example"
+  selectedProduct: string;
+  switchExample: string = "ngSwitch Case Example"
 
   constructor() { }
 
   ngOnInit() {
   }
-  getProductValue(value){
+  getProductValue(value) {
     console.log(value.target.value);
-    this.selectedProduct =value.target.value;
+    this.selectedProduct = value.target.value;
   }
-
 }
