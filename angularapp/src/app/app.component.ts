@@ -7,13 +7,17 @@ import { Product } from './models/product';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  data;
+  showIs:boolean= true;
+  data:string= 'red';
   title = 'angularapp';
   myName = 'I am from app component';
   public uid: number;
   name:string;
   price:number;
   product:Product = new Product();
+  destroy(){
+    this.showIs = false;
+  }
 
   employeeRecords:any =[
     {
@@ -36,10 +40,11 @@ export class AppComponent {
   
   updateProduct(){
     this.product = new Product();
-
     this.product.name = this.name;
     this.product.price = this.price;
-    
+  }
+  parentData(value){
+this.data= value.target.value;
   }
 
   }

@@ -19,6 +19,8 @@ import { SelectMyPicturesComponent } from './select-my-pictures/select-my-pictur
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { HooksComponent } from './hooks/hooks.component';
+import { TenLectureAssignmentComponent } from './ten-lecture-assignment/ten-lecture-assignment.component';
+import { TemplateForm01Component } from './template-form01/template-form01.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { HooksComponent } from './hooks/hooks.component';
     SelectMyPicturesComponent,
     ChildComponentComponent,
     ParentComponentComponent,
-    HooksComponent
+    HooksComponent,
+    TenLectureAssignmentComponent,
+    TemplateForm01Component
   ],
   imports: [
     BrowserModule,

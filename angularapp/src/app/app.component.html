@@ -67,9 +67,21 @@
     <p>Product Name:<input type="text" placeholder="Enter Product Name" [(ngModel)]="name"></p>
     <p>Product Price:<input type="text" placeholder="Enter Product Price" [(ngModel)]="price"></p>
     <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
-    <app-hooks [userId]="uid" [product]="product"></app-hooks>
+
+    <hr>
+    <app-hooks *ngIf="showIs" [userId]="uid" [product]="product" [parentData]="data">
+      <h2 #child>This is child content coming from Parent component</h2>
+    </app-hooks>
+    <button class="btn btn-danger" (click)="destroy()">Destroy Hooks</button>
   </div>
 </div>
-
-
+<hr>
+<h4>
+  <div class="row" style="text-align:center;">
+    <app-ten-lecture-assignment></app-ten-lecture-assignment>
+  </div>
+</h4>
+<hr>
+<app-template-form01></app-template-form01>
 <router-outlet></router-outlet>
+
