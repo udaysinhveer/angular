@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded py-5">
+      <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter username">
+        </div>
+        <small class="text-danger" *ngIf="!myReactiveForm.get('username').valid && myReactiveForm.get('username').touched">
+        <small *ngIf="myReactiveForm.get('username').errors['required']">Please Enter Valid Username</small>
+        </small>
+        <div class="form-group">
+          <input type="text" class="form-control" id="email" formControlName="email" placeholder="Enter email">
+          <small class="text-danger" *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched">Please Enter Valid Email</small>
+        </div>
+        <div class="form-group">
+          <label for="course">Select Course</label>
+          <select class="form-control"  formControlName="course"  id="course">
+            <option value="Angular">Angular</option>
+            <option value="HTML">HTML</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class=" custom-control custom-radio" *ngFor="let gender of genders">
+              <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-radio" formControlName="gender">
+              <label for="{{gender.id}}">{{gender.value}}</label>
+          </div>
+        </div>
+        <button class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div class="row justify-content-center mt-2" *ngIf="submitted" >
+<div class="col-md-6 rounded shadow py-4">
+  <h2>Reactive Form Data</h2>
+  <p>User Name : <strong>{{myReactiveForm.get('username').value}}</strong></p>
+  <p>User Email : <strong>{{myReactiveForm.get('email').value}}</strong></p>
+  <p>Selected Course : <strong>{{myReactiveForm.get('course').value}}</strong></p>
+  <p>Gender: <strong>{{myReactiveForm.get('gender').value}}</strong></p>
+</div>
+    </div>
+  </div>
+</div>
