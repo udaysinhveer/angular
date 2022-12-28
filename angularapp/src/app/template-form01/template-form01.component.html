@@ -12,7 +12,7 @@
           <div class="form-group">
             <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" #email="ngModel" email id="email" name="email"
-              placeholder="Enter Email" required ngModel>
+              placeholder="Enter Email" required ngModel  ng-pattern="/^[A-Za-z0-9._%+-]+@veer.com$/">
             <small class="text-danger" *ngIf="!email.valid && email.touched">Enter Valid Email</small>
             <br>
           </div>

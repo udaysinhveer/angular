@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
@@ -21,6 +21,9 @@ import { ParentComponentComponent } from './parent-component/parent-component.co
 import { HooksComponent } from './hooks/hooks.component';
 import { TenLectureAssignmentComponent } from './ten-lecture-assignment/ten-lecture-assignment.component';
 import { TemplateForm01Component } from './template-form01/template-form01.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { Service1Component } from './service1/service1.component';
+import { Service2Component } from './service2/service2.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,16 @@ import { TemplateForm01Component } from './template-form01/template-form01.compo
     ParentComponentComponent,
     HooksComponent,
     TenLectureAssignmentComponent,
-    TemplateForm01Component
+    TemplateForm01Component,
+    ReactiveFormComponent,
+    Service1Component,
+    Service2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

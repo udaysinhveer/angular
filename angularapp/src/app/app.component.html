@@ -1,13 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1 class="demo">
     Welcome to {{ title }}!
   </h1>
   <app-server></app-server>
   <hr>
   <button type="button" class="btn btn-success">Success</button>
-  <!--button from bootstrap -->
+   button from bootstrap
   <h5>
     <app-servers></app-servers>
   </h5>
@@ -33,13 +33,9 @@
 </h3>
 <div style="text-align:center">
 </div>
-<!-- <app-demo [myInputMsg]="myName" ></app-demo>  -->
-<!-- this data we passing in another component  -->
-
-<!-- <app-demo [myInputMsg]="udayInfo" ></app-demo>  
-  <div *ngFor="let e of employeeRecords">
-  <app-demo [employee]="e" ></app-demo> -->
-<!-- </div> -->
+<app-demo [myInputMsg]="myName" ></app-demo>
+/
+ </div>
 <ul *ngFor="let f of foods">
   <li>
     {{f}} {{parentComponent}}
@@ -74,14 +70,20 @@
     </app-hooks>
     <button class="btn btn-danger" (click)="destroy()">Destroy Hooks</button>
   </div>
-</div>
-<hr>
+</div> 
+ <hr>
 <h4>
   <div class="row" style="text-align:center;">
     <app-ten-lecture-assignment></app-ten-lecture-assignment>
   </div>
 </h4>
 <hr>
-<app-template-form01></app-template-form01>
+<app-template-form01></app-template-form01>-->
+
+ <app-reactive-form></app-reactive-form> 
+<hr>
+<app-service1></app-service1>
+<app-service2></app-service2>
+<hr>
 <router-outlet></router-outlet>
 
