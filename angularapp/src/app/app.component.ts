@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { DemoService } from './demo.service';
 import { Product } from './models/product';
 
 @Component({
@@ -6,7 +7,27 @@ import { Product } from './models/product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  mydata;
+
+constructor(private _demoservice:DemoService){
+
+}ngOnInit(): void {
+    this._demoservice.getUserData().subscribe(data=>{
+      console.log(`AppComponents`, data);
+      
+    })
+    this._demoservice.getDataPosts().subscribe(result=>{
+      console.log();
+      console.log(`Posts`, result);
+      
+      
+    })
+  };
+
+
+
   showIs:boolean= true;
   data:string= 'red';
   title = 'angularapp';
@@ -45,6 +66,9 @@ export class AppComponent {
   }
   parentData(value){
 this.data= value.target.value;
+
+console.log(this.mydata);
+
   }
 
   }

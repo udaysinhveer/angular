@@ -24,6 +24,15 @@ import { TemplateForm01Component } from './template-form01/template-form01.compo
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { Service1Component } from './service1/service1.component';
 import { Service2Component } from './service2/service2.component';
+import{HttpClientModule} from '@angular/common/http';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
+import { CountPipe } from './count.pipe';
+import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -47,13 +56,22 @@ import { Service2Component } from './service2/service2.component';
     TemplateForm01Component,
     ReactiveFormComponent,
     Service1Component,
-    Service2Component
+    Service2Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    Comp1Component,
+    PipesDemoComponent,
+    CountPipe,
+    FilterPipeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

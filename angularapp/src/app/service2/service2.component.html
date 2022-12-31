@@ -1,2 +1,10 @@
 <p>service2 works!</p>
-<button (click)="OnSubscribe()">Subscribe</button>
+<button (click)="OnSubscribe()">Subscribe</button> <br>
+<br>
+<br>
+<h2>this is service component 2</h2> <br>
+<ng-container *ngFor="let item of product ">
+    Product ID : <strong class="text-sucess">{{item.id}}</strong>
+    Product Name : <strong class="text-sucess">{{item.Name}}</strong>
+    <br>
+</ng-container>

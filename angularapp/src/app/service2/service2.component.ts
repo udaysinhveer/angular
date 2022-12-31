@@ -7,10 +7,11 @@ import { DemoService } from '../demo.service';
   styleUrls: ['./service2.component.css']
 })
 export class Service2Component implements OnInit {
-
+product={};
   constructor(private _demoService:DemoService) { }
 
   ngOnInit() {
+    this.product= this._demoService.products;
   }
   OnSubscribe(){
      this._demoService.display();

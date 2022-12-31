@@ -8,9 +8,12 @@ import { DemoService } from '../demo.service';
 })
 export class Service1Component implements OnInit {
 
+  items = {};
+
   constructor(private _demoService:DemoService) { }
 
   ngOnInit() {
+    this.items = this._demoService.products;
   }
   OnSubscribe(){
     this._demoService.display();
