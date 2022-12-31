@@ -34,6 +34,7 @@ import { CountPipe } from './count.pipe';
 import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
 import { FilterPipe } from './filter.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,7 @@ import { FilterPipe } from './filter.pipe';
     PipesDemoComponent,
     CountPipe,
     FilterPipeComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
