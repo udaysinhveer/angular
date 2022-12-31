@@ -1,0 +1,35 @@
+<p>pipes-demo works!</p>
+
+<div>
+    Today's Date : {{todayDate | date | uppercase}}
+</div>
+<hr>
+<div>
+    <h4>Value from service without use of subscribe, using async pipe </h4>
+     {{ServiceValue | async}}
+
+</div>
+<Br><br>
+
+<div>
+   <h3><strong> Currency Pipe</strong></h3> <br>
+    
+    Indian Currency : {{price | currency:'INR'}} <br>
+    Indian Currency : {{price | currency:'USD'}} <br>
+    Indian Currency : {{price | currency:'EUR'}} <br>
+</div> <br>
+
+<div>
+     Decimal Pipe : {{num1 | number}}  <!-- sit will convert decimal to number -->
+</div> <br>
+
+<div>
+   <strong> Access Object from TS file using JSON Pipe : </strong> {{ obj | json}}
+</div> <br>
+
+<div>
+   <h5>Custom Pipe</h5>
+   {{myNumber | count}} <!-- count is a custom pipe, logic in the count will be apply here -->
+</div>
+
+
