@@ -33,6 +33,16 @@ import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 import { CountPipe } from './count.pipe';
 import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
 import { FilterPipe } from './filter.pipe';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TVComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
 
 
 @NgModule({
@@ -66,13 +76,23 @@ import { FilterPipe } from './filter.pipe';
     CountPipe,
     FilterPipeComponent,
     FilterPipe,
+    LoginComponent,
+    HomeComponent,
+    AboutusComponent,
+    ProductComponent,
+    ContactusComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TVComponent,
+    TabletComponent,
+    WashingMachineComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

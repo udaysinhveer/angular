@@ -80,13 +80,13 @@
 <hr>
 <app-template-form01></app-template-form01>-->
 
- <app-reactive-form></app-reactive-form> 
+ <!-- <app-reactive-form></app-reactive-form> 
 <hr>
 <app-service1></app-service1>
 <app-service2></app-service2>
-<hr>
+<hr> -->
 <div style="text-align:center;">
-  <app-comp1> </app-comp1>
+  <!-- <app-comp1> </app-comp1>
   <hr>
 <app-comp2></app-comp2>
 <hr>
@@ -96,7 +96,18 @@
 <hr>
 <app-pipes-demo></app-pipes-demo>
 <hr>
-<app-filter-pipe></app-filter-pipe>
+<app-filter-pipe></app-filter-pipe> -->
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <!-- <li class="nav-item"> <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" routerLink="./">Login</a> </li> -->
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="home/">Home</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="aboutus/">About Us</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="product/">Product</a> </li>
+      <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLink="contactus/">Contact US</a> </li>
+    </ul>
+  </nav>
+</header>
 </div>
 <hr>
 <router-outlet></router-outlet>
