@@ -5,11 +5,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { ProductComponent } from './product/product.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { TVComponent } from './product/tv/tv.component';
-import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { DemopostComponent } from './product/demopost/demopost.component';
 
 
 const routes: Routes = [
@@ -17,13 +14,11 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'aboutus', component: AboutusComponent},
-  {path: 'product', component:ProductComponent, children:[
-   {path: 'laptop', component: LaptopComponent},
-   {path: 'tablet', component: TabletComponent},
-   {path: 'tv', component: TVComponent},
-   {path: 'washingmachine', component: WashingMachineComponent}
-  ]},
   {path: 'contactus', component:ContactusComponent},
+  {path: 'post', component:DemopostComponent},
+  {path: 'postdetails/:id', component: PostdetailsComponent},
+  {path: 'product', loadChildren: './product/products.module#ProductsModule'}, // this is syntax of lazy loading 
+  {path: 'orders', loadChildren:'./orders/orders.module#OrdersModule'},
   {path: '**', component:PagenotfoundComponent}  // this is wildcard route for page not found
 ];
 
@@ -31,4 +26,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {};
+export class AppRoutingModule {
+  constructor(){
+    console.log('Routing module called');
+    
+  }
+};

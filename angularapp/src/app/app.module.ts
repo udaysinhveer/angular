@@ -13,7 +13,6 @@ import { DemoDirectivesComponent } from './demo-directives/demo-directives.compo
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { StructuralDirectiveAssignmentComponent } from './structural-directive-assignment/structural-directive-assignment.component';
 import { AttributesComponent } from './attributes/attributes.component';
-import { CustomDirectivesDirective } from './custom-directives.directive';
 import { DemoComponent } from './demo/demo.component';
 import { SelectMyPicturesComponent } from './select-my-pictures/select-my-pictures.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
@@ -36,13 +35,13 @@ import { FilterPipe } from './filter.pipe';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ProductComponent } from './product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TVComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
+import { DemopostComponent } from './product/demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { ProductsModule } from './product/products.module';
+import { OrdersModule } from './orders/orders.module';
+
 
 
 @NgModule({
@@ -57,7 +56,6 @@ import { WashingMachineComponent } from './product/washing-machine/washing-machi
     NgSwitchComponent,
     StructuralDirectiveAssignmentComponent,
     AttributesComponent,
-    CustomDirectivesDirective,
     DemoComponent,
     SelectMyPicturesComponent,
     ChildComponentComponent,
@@ -79,22 +77,27 @@ import { WashingMachineComponent } from './product/washing-machine/washing-machi
     LoginComponent,
     HomeComponent,
     AboutusComponent,
-    ProductComponent,
     ContactusComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TVComponent,
-    TabletComponent,
-    WashingMachineComponent,
+    DemopostComponent,
+    PostdetailsComponent,
   ],
   imports: [
     BrowserModule,
+    // ProductsModule, // this added before AppRoutingModule because it will throw error page not found 
+    // OrdersModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('App module called');
+    
+  }
+}
